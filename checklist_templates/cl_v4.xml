@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- DO NOT CHANGE ANYTHING IN THIS FILE (UPDATED 2021/02/15) -->
+<CheckListDetail>
+	<pre-flight stageNum="0" stageNameCN="飞行前">
+		<item id="0">
+			<itemName>*停留刹车</itemName>
+			<status>设置</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="1">0</autocheck>
+		</item>
+		<item id="1">
+			<itemName>*襟翼</itemName>
+			<status>收回</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="0">0</autocheck>
+		</item>
+		<item id="2">
+			<itemName>*减速板</itemName>
+			<status>收回-解除预位</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="0">0</autocheck>
+		</item>
+		<item id="3">
+			<itemName>*引擎控制开关1和2</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="0">0</autocheck>
+		</item>
+		<item id="4">
+			<itemName>引擎模式选择</itemName>
+			<status>正常(NORMAL)</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="5">
+			<itemName>推力手柄</itemName>
+			<status>怠速(IDLE)</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="6">
+			<itemName>*起落架</itemName>
+			<status>放下</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="1">0</autocheck>
+		</item>
+		<item id="7">
+			<itemName>刮雨器</itemName>
+			<status>关闭(左右座)</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="8">
+			<itemName>*机轮防抱死系统</itemName>
+			<status>开启</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="1">0</autocheck>
+		</item>
+	</pre-flight>
+	<cockpit_preparationA stageNum="1" stageNameCN="驾驶舱准备(I)">
+		<item id="0">
+			<itemName>机载电源1和2</itemName>
+			<status>接通</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="1">
+			<itemName>电力供应系统</itemName>
+			<status>外部或APU</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="2">
+			<itemName>ADIRS</itemName>
+			<status>NAV</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="3">
+			<itemName>CREW SUPPLY</itemName>
+			<status>启动</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="4">
+			<itemName>*NAV和LOGO灯</itemName>
+			<status>启动</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="1">0</autocheck>
+		</item>
+		<item id="5">
+			<itemName>客舱禁止吸烟指示灯</itemName>
+			<status>自动</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="6">
+			<itemName>紧急灯光</itemName>
+			<status>预位</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="7">
+			<itemName>衰减灯光</itemName>
+			<status>测试</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="8">
+			<itemName>空调系统</itemName>
+			<status>按需</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="9">
+			<itemName>显示屏亮度</itemName>
+			<status>按需</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="10">
+			<itemName>驾驶舱灯光</itemName>
+			<status>按需</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="11">
+			<itemName>APU和ENG火警测试</itemName>
+			<status>执行完毕</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="12">
+			<itemName>无线电面板</itemName>
+			<status>开启</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+	</cockpit_preparationA>
+	<cockpit_preparationB stageNum="2" stageNameCN="驾驶舱准备(II)">
+		<item id="0">
+			<itemName>客舱安全带指示灯</itemName>
+			<status>开启</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="1">
+			<itemName>飞行指引(F/D)</itemName>
+			<status>开启</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="2">
+			<itemName>起始爬升高度</itemName>
+			<status>{_________}</status>
+			<editable>1</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="3">
+			<itemName>起飞机场修正海压</itemName>
+			<status>{_________}</status>
+			<editable>1</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="4">
+			<itemName>应答机编码</itemName>
+			<status>{_________}</status>
+			<editable>1</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="5">
+			<itemName>风切变探测系统</itemName>
+			<status>开启</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="6">
+			<itemName>灵活温度</itemName>
+			<status>{_________}度</status>
+			<editable>1</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="7">
+			<itemName>起飞机场转换高度</itemName>
+			<status>{_________}</status>
+			<editable>1</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="8">
+			<itemName>起飞性能数据</itemName>
+			<status>已设置</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="9">
+			<itemName>燃油量</itemName>
+			<status>{_________}, 已检查</status>
+			<editable>1</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+	</cockpit_preparationB>
+	<before_startA stageNum="3" stageNameCN="启动前(I)">
+		<item id="0">
+			<itemName>窗户和舱门</itemName>
+			<status>关闭并上锁</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="1">
+			<itemName>*APU</itemName>
+			<status>启动</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="1">0</autocheck>
+		</item>
+		<item id="2">
+			<itemName>APU电门</itemName>
+			<status>启动</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="3">
+			<itemName>外部电源</itemName>
+			<status>断开</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="4">
+			<itemName>燃油泵</itemName>
+			<status>开启</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="5">
+			<itemName>*防撞灯</itemName>
+			<status>开启</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="1">0</autocheck>
+		</item>
+		<item id="6">
+			<itemName>应答机模式</itemName>
+			<status>自动(AUTO)</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+	</before_startA>
+	<before_startB stageNum="4" stageNameCN="启动前(II)">
+		<item id="0">
+			<itemName>引擎模式选择器</itemName>
+			<status>点火模式(IGN)</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="1">
+			<itemName>*停留刹车</itemName>
+			<status>释放</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="0">0</autocheck>
+		</item>
+		<item id="2">
+			<itemName>时钟</itemName>
+			<status>启动</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+	</before_startB>
+	<after_startA stageNum="5" stageNameCN="启动后(I)">
+		<item id="0">
+			<itemName>*停留刹车</itemName>
+			<status>设置</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="1">0</autocheck>
+		</item>
+		<item id="1">
+			<itemName>引擎模式选择器</itemName>
+			<status>正常(NORMAL)</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="2">
+			<itemName>APU点门</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="3">
+			<itemName>*APU</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="0">0</autocheck>
+		</item>
+		<item id="4">
+			<itemName>自动刹车</itemName>
+			<status>MAX</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="5">
+			<itemName>*减速板</itemName>
+			<status>预位</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="1">0</autocheck>
+		</item>
+		<item id="6">
+			<itemName>起飞襟翼设置</itemName>
+			<status>形态 {_________}</status>
+			<editable>1</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="7">
+			<itemName>探针和舷窗加热</itemName>
+			<status>自动</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="8">
+			<itemName>除冰</itemName>
+			<status>按需</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="9">
+			<itemName>俯仰配平</itemName>
+			<status>{_________}</status>
+			<editable>1</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="10">
+			<itemName>方向舵配平</itemName>
+			<status>零</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="11">
+			<itemName>飞行操作</itemName>
+			<status>已检查</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="12">
+			<itemName>V1, VR, V2</itemName>
+			<status>{_____, _____, _____}</status>
+			<editable>1</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="13">
+			<itemName>T.O CONFIG</itemName>
+			<status>无蓝字</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+	</after_startA>
+	<after_startB stageNum="6" stageNameCN="启动后(II)">
+		<item id="0">
+			<itemName>*鼻轮灯</itemName>
+			<status>TAXI模式</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="1">0</autocheck>
+		</item>
+		<item id="1">
+			<itemName>跑道灯</itemName>
+			<status>开启</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+	</after_startB>
+	<before_takeoffA stageNum="7" stageNameCN="起飞前(I)">
+		<item id="0">
+			<itemName>客舱乘务员</itemName>
+			<status>已通知</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="1">
+			<itemName>TCAS</itemName>
+			<status>TA或者TA/RA, ABV</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="2">
+			<itemName>空调组件</itemName>
+			<status>按需</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="3">
+			<itemName>天气雷达</itemName>
+			<status>开启</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="4">
+			<itemName>机翼灯</itemName>
+			<status>按需</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="5">
+			<itemName>*鼻轮灯</itemName>
+			<status>T.O模式</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="1">0</autocheck>
+		</item>
+		<item id="6">
+			<itemName>*着陆灯</itemName>
+			<status>开启</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="1">0</autocheck>
+		</item>
+		<item id="7">
+			<itemName>频闪灯</itemName>
+			<status>开启</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="8">
+			<itemName>ECAM起飞备忘</itemName>
+			<status>无蓝字</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+	</before_takeoffA>
+	<before_takeoffB stageNum="8" stageNameCN="起飞前(II)">
+		<item id="0">
+			<itemName>计时器</itemName>
+			<status>启动</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+	</before_takeoffB>
+	<after_takeoff stageNum="9" stageNameCN="起飞后">
+		<item id="0">
+			<itemName>*起落架</itemName>
+			<status>收上</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="0">0</autocheck>
+		</item>
+		<item id="1">
+			<itemName>*襟翼</itemName>
+			<status>收回</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="0">0</autocheck>
+		</item>
+		<item id="2">
+			<itemName>*减速板</itemName>
+			<status>解除预位</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="0">0</autocheck>
+		</item>
+		<item id="3">
+			<itemName>推力手柄</itemName>
+			<status>爬升模式(CLIMB)</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="4">
+			<itemName>*鼻轮灯</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="0">0</autocheck>
+		</item>
+		<item id="5">
+			<itemName>跑道灯</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="6">
+			<itemName>空调组件</itemName>
+			<status>开启</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+	</after_takeoff>
+	<climbA stageNum="10" stageNameCN="爬升">
+		<item id="0">
+			<itemName>修正海压</itemName>
+			<status>标准气压(STD)</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="1">
+			<itemName>除冰</itemName>
+			<status>按需</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+	</climbA>
+	<climbB stageNum="11" stageNameCN="爬升(通过10000ft)">
+		<item id="0">
+			<itemName>*着陆灯</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="0">0</autocheck>
+		</item>
+		<item id="1">
+			<itemName>机翼灯</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="2">
+			<itemName>客舱安全带指示灯</itemName>
+			<status>按需</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+	</climbB>
+	<cruise stageNum="12" stageNameCN="巡航">
+		<item id="0">
+			<itemName>ECAM状态</itemName>
+			<status>已检查</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="1">
+			<itemName>NAV AIDS</itemName>
+			<status>检查</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+	</cruise>
+	<before_descent stageNum="13" stageNameCN="下高前">
+		<item id="0">
+			<itemName>下高简报</itemName>
+			<status>完成</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="1">
+			<itemName>天气报告</itemName>
+			<status>已收到</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="2">
+			<itemName>进近跑道/进近模式</itemName>
+			<status>已选择</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="3">
+			<itemName>客舱安全带指示灯</itemName>
+			<status>开启</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="4">
+			<itemName>目的地机场修正海压</itemName>
+			<status>{_________}</status>
+			<editable>1</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="5">
+			<itemName>目的地机场地面温度</itemName>
+			<status>{_________}摄氏度</status>
+			<editable>1</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="6">
+			<itemName>目的地机场地面风向/风速</itemName>
+			<status>{_____/_____}</status>
+			<editable>1</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="7">
+			<itemName>目的地机场转换高度</itemName>
+			<status>{_________}</status>
+			<editable>1</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="8">
+			<itemName>目的地机场决断高度</itemName>
+			<status>{_________}</status>
+			<editable>1</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+	</before_descent>
+	<descentA stageNum="14" stageNameCN="下高">
+		<item id="0">
+			<itemName>TCAS</itemName>
+			<status>BLW</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="1">
+			<itemName>着陆数据</itemName>
+			<status>已复查</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="2">
+			<itemName>进近简报</itemName>
+			<status>已完成</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="3">
+			<itemName>除冰</itemName>
+			<status>按需</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="4">
+			<itemName>修正海压</itemName>
+			<status>已设置</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+	</descentA>
+	<descentB stageNum="15" stageNameCN="下高(通过10000ft)">
+		<item id="0">
+			<itemName>*着陆灯</itemName>
+			<status>开启</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="1">0</autocheck>
+		</item>
+		<item id="1">
+			<itemName>机翼灯</itemName>
+			<status>按需</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="2">
+			<itemName>客舱安全带指示灯</itemName>
+			<status>开启</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+	</descentB>
+	<before_landing stageNum="16" stageNameCN="着陆前">
+		<item id="0">
+			<itemName>*起落架</itemName>
+			<status>放下</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="1">0</autocheck>
+		</item>
+		<item id="1">
+			<itemName>*鼻轮灯</itemName>
+			<status>开启</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="1">0</autocheck>
+		</item>
+		<item id="2">
+			<itemName>跑道灯</itemName>
+			<status>开启</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="3">
+			<itemName>着陆自动刹车</itemName>
+			<status>{_________}</status>
+			<editable>1</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="4">
+			<itemName>*减速板</itemName>
+			<status>预位</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="1">0</autocheck>
+		</item>
+		<item id="5">
+			<itemName>着陆襟翼</itemName>
+			<status>形态 {_________}</status>
+			<editable>1</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="6">
+			<itemName>复飞高度</itemName>
+			<status>{_________}</status>
+			<editable>1</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="7">
+			<itemName>ECAM着陆备忘</itemName>
+			<status>无蓝字</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+	</before_landing>
+	<after_landing stageNum="17" stageNameCN="着陆后">
+		<item id="0">
+			<itemName>计时器</itemName>
+			<status>停止</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="1">
+			<itemName>*着陆灯</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="0">0</autocheck>
+		</item>
+		<item id="2">
+			<itemName>机翼灯</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="3">
+			<itemName>*鼻轮灯</itemName>
+			<status>TAXI模式</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="1">0</autocheck>
+		</item>
+		<item id="4">
+			<itemName>*襟翼</itemName>
+			<status>收回</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="0">0</autocheck>
+		</item>
+		<item id="5">
+			<itemName>*减速板</itemName>
+			<status>收回-解除预位</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="0">0</autocheck>
+		</item>
+		<item id="6">
+			<itemName>TCAS</itemName>
+			<status>STBY或TA</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="7">
+			<itemName>*APU</itemName>
+			<status>开启</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="1">0</autocheck>
+		</item>
+		<item id="8">
+			<itemName>APU电门</itemName>
+			<status>按需</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="9">
+			<itemName>飞行指引系统(F/D)</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="10">
+			<itemName>除冰</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="11">
+			<itemName>探针和舷窗加热</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="12">
+			<itemName>天气雷达</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+	</after_landing>
+	<before_enter_gate stageNum="18" stageNameCN="滑行进机位前">
+		<item id="0">
+			<itemName>跑道灯</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="1">
+			<itemName>*鼻轮灯</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="0">0</autocheck>
+		</item>
+	</before_enter_gate>
+	<at_gate stageNum="19" stageNameCN="停机到位后">
+		<item id="0">
+			<itemName>*停留刹车</itemName>
+			<status>设置</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="1">0</autocheck>
+		</item>
+		<item id="1">
+			<itemName>时钟</itemName>
+			<status>停止</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="2">
+			<itemName>*引擎1和2主开关</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="0">0</autocheck>
+		</item>
+		<item id="3">
+			<itemName>燃油泵</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="4">
+			<itemName>*防撞灯</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="0">0</autocheck>
+		</item>
+		<item id="5">
+			<itemName>客舱安全带指示灯</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="6">
+			<itemName>应答机模式</itemName>
+			<status>STBY</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="7">
+			<itemName>风切变探测系统</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="8">
+			<itemName>外部电源</itemName>
+			<status>接通，如果可用</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+	</at_gate>
+	<shutdown stageNum="20" stageNameCN="关机">
+		<item id="0">
+			<itemName>CREW SUPPLY</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="1">
+			<itemName>*NAV和LOGO灯</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="0">0</autocheck>
+		</item>
+		<item id="3">
+			<itemName>客舱禁止吸烟指示灯</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="4">
+			<itemName>紧急灯光</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="5">
+			<itemName>无线电面板</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="6">
+			<itemName>显示屏</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="7">
+			<itemName>ADIRS</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="8">
+			<itemName>APU电门</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="9">
+			<itemName>*APU</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="1" default="0">0</autocheck>
+		</item>
+		<item id="10">
+			<itemName>外部电源</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="11">
+			<itemName>驾驶舱灯光</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+		<item id="12">
+			<itemName>机载电源</itemName>
+			<status>关闭</status>
+			<editable>0</editable>
+			<autocheck enable="0" default="0">0</autocheck>
+		</item>
+	</shutdown>
+</CheckListDetail>
