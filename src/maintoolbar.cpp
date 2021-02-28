@@ -60,10 +60,15 @@ MainToolBar::MainToolBar(QWidget *parent) : QWidget(parent)
     /* Methods & Functions */
     this->setupUI();  // build layout
     this->events();
+
+    SimConnectThread::getInstance()->simConnect();
 }
 
 MainToolBar::~MainToolBar()  // virtual destructor
 {
+    SimConnectThread::getInstance()->simDisconnect();
+    SimConnectThread::deleteInstance();
+
     delete this->lay;
     this->lay = nullptr;
 
@@ -302,8 +307,7 @@ void MainToolBar::showAndHideCheckListFrame()
             // then close the drop down window will automatic turn to next check list stage
             setDropDownArrowIcon(true);
 
-            disconnect(this->checkListFrame, SIGNAL(prevPGButton_onClicked_signal()), this, SLOT(prevPGButton_onClicked()));
-            disconnect(this->checkListFrame, SIGNAL(nextPGButton_onClicked_signal()), this, SLOT(nextPGButton_onClicked()));
+            this->checkListFrame->terminateDataRequestFromSim();
 
             this->checkListFrame->close();
             this->checkListFrame->deleteLater();

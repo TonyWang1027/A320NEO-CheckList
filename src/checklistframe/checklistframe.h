@@ -94,21 +94,26 @@ class SimConnectThread : public QThread
 {
     Q_OBJECT
 public:
-    SimConnectThread(const int &stageNum);
-    virtual ~SimConnectThread();
+    static SimConnectThread *getInstance();
+    static void deleteInstance();
 
     bool setIndexArray();
-
-    SimDataCollector *simDataCollector;
-
     int stageNum() const;
-    void setStageNum(int stageNum);
+    void setStageNum(const int stageNum);
 
-    void setSimDataCollectorConfig(const int stageNum);
+    void simConnect();
+    void simDisconnect();
+    void resetSurveillandStage(const int stageNum);
 
 private:
+    SimConnectThread() {}
+    virtual ~SimConnectThread();
+
     int m_stageNum;
     QVector<int> m_indexes;
+    bool isConnected;
+
+    static SimConnectThread *s_simConnectThread;
 
     void run() override;
 
@@ -124,16 +129,15 @@ public:
     explicit CheckListFrame(QWidget *parent = nullptr);
     virtual ~CheckListFrame();
 
+    CheckListBottomToolBar *checkListBottomToolBar;
+
     void addCheckListItemWidgets(bool addBottomToolBar = true);
     void delCheckListItemWidgets();
     void setCheckListStage(int &t_stageNum);
     void startDataRequestFromSim();
-
-protected:
-    CheckListBottomToolBar *checkListBottomToolBar;
+    void terminateDataRequestFromSim();
 
 private:
-    SimConnectThread *simConnectThread;
     QVector<CheckListItem*> checkListItems;
 
     QWidget *center;
