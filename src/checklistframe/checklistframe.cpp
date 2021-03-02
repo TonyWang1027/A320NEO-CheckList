@@ -203,9 +203,7 @@ void CheckListFrame::startDataRequestFromSim()
 {
     // simConnectThread = new SimConnectThread(m_stageNum);
     SimConnectThread::getInstance()->setStageNum(m_stageNum);
-    lockForWrite();
     SimDataCollector::getInstance()->setTerminateDataRequests(false);
-    unlock();
 
     qRegisterMetaType<uint32_t>("uint32_t");
     connect(SimConnectThread::getInstance(), &SimConnectThread::dataCollected_signal,
@@ -232,9 +230,7 @@ void CheckListFrame::startDataRequestFromSim()
 
 void CheckListFrame::terminateDataRequestFromSim()
 {
-    lockForWrite();
     SimDataCollector::getInstance()->setTerminateDataRequests(true);
-    unlock();
 }
 
 
@@ -366,7 +362,6 @@ void SimConnectThread::run()
 
 bool SimConnectThread::setIndexArray()
 {
-    lockForWrite();
     m_indexes.clear();
     for (int i = 0; i < global_checkListItems.value(m_stageNum).size(); i++)
     {
@@ -376,13 +371,11 @@ bool SimConnectThread::setIndexArray()
         }
     }
     SimDataCollector::getInstance()->setIndexes(m_indexes);
-    unlock();
     return true;
 }
 
 void SimConnectThread::resetSurveillandStage(const int stageNum)
 {
-    lockForWrite();
     SimDataCollector::getInstance()->setStageNum(stageNum);
     setStageNum(stageNum);
     m_indexes.clear();
@@ -396,7 +389,6 @@ void SimConnectThread::resetSurveillandStage(const int stageNum)
     }
 
     SimDataCollector::getInstance()->setIndexes(m_indexes);
-    unlock();
 }
 
 void SimConnectThread::simConnect()
@@ -424,9 +416,7 @@ void SimConnectThread::simDisconnect()
     if (!isConnected) return;
 
     SimDataCollector::getInstance()->clearDataDefinition();
-    lockForWrite();
     SimDataCollector::getInstance()->setTerminateDataRequests(true);
-    unlock();
     SimDataCollector::getInstance()->closeSimConnection();
 
     disconnect(SimDataCollector::getInstance(), nullptr, nullptr, nullptr);

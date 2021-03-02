@@ -138,6 +138,7 @@ void MainToolBar::setupUI()
     this->topWindowButton->setStyleSheet("QPushButton#topWindowButton{ border:none;background:none; }"
                                      "QPushButton#topWindowButton:hover { border:none;background:#464659; }");
 
+    this->aircraftTypeLabel->setToolTip(QString::fromUtf8("v0.10.1"));
     this->dataSettingsButton->setToolTip(QString::fromUtf8("设置检查单数据"));
     this->topWindowButton->setToolTip(QString::fromUtf8("置顶窗口"));
     this->dropDownButton->setToolTip(QString::fromUtf8("显示/隐藏检查单"));

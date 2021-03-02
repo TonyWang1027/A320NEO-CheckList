@@ -51,7 +51,9 @@
 
 extern HRESULT hr;
 extern HANDLE hSimConnect;
-extern QReadWriteLock rwlock;
+extern QReadWriteLock rwlock_stageNum;
+extern QReadWriteLock rwlock_indexes;
+extern QReadWriteLock rwlock_dataRequest;
 
 enum DATA_DEFINE_ID {
     DEFINITION,
@@ -119,10 +121,6 @@ signals:
     void dataCollected_signal(int, int, uint32_t);
 
 };
-
-extern "C++" Q_DECL_EXPORT void lockForRead();
-extern "C++" Q_DECL_EXPORT void lockForWrite();
-extern "C++" Q_DECL_EXPORT void unlock();
 
 void CALLBACK Dispatch(SIMCONNECT_RECV* pData, DWORD cbData, void* pContext);
 
