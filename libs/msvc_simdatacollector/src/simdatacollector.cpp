@@ -33,26 +33,13 @@
 
 #include "simdatacollector.h"
 
-HRESULT hr;
-HANDLE hSimConnect = NULL;
-QReadWriteLock rwlock;
+static HRESULT hr;
+static HANDLE hSimConnect = NULL;
+static QReadWriteLock rwlock_stageNum;
+static QReadWriteLock rwlock_indexes;
+static QReadWriteLock rwlock_dataRequest;
 
 SimDataCollector *SimDataCollector::s_simDataCollector = nullptr;
-
-void lockForRead()
-{
-    rwlock.lockForRead();
-}
-
-void lockForWrite()
-{
-    rwlock.lockForWrite();
-}
-
-void unlock()
-{
-    rwlock.unlock();
-}
 
 void CALLBACK Dispatch(SIMCONNECT_RECV *pData, DWORD cbData, void *pContext)
 {
@@ -83,7 +70,8 @@ void CALLBACK Dispatch(SIMCONNECT_RECV *pData, DWORD cbData, void *pContext)
 
 void SimDataCollector::emitSignals(const SimResponse*& pS)
 {
-    rwlock.lockForRead();
+    rwlock_stageNum.lockForRead();
+    rwlock_indexes.lockForRead();
     if (stageNum == 0)
     {
         emit this->dataCollected_signal(stageNum, indexes.at(0), pS->brake_parking_indicator);
@@ -192,7 +180,8 @@ void SimDataCollector::emitSignals(const SimResponse*& pS)
         emit SimDataCollector::dataCollected_signal(stageNum, indexes.at(0), pS->light_nav_on);
         emit SimDataCollector::dataCollected_signal(stageNum, indexes.at(1), pS->apu_generator_active);
     }
-    rwlock.unlock();
+    rwlock_indexes.unlock();
+    rwlock_stageNum.unlock();
 }
 
 SimDataCollector::SimDataCollector()
@@ -274,7 +263,9 @@ int SimDataCollector::getStageNum() const
 
 void SimDataCollector::setStageNum(int value)
 {
+    rwlock_stageNum.lockForWrite();
     stageNum = value;
+    rwlock_stageNum.unlock();
 }
 
 QVector<int> SimDataCollector::getIndexes() const
@@ -284,7 +275,9 @@ QVector<int> SimDataCollector::getIndexes() const
 
 void SimDataCollector::setIndexes(const QVector<int> &value)
 {
+    rwlock_indexes.lockForWrite();
     indexes = value;
+    rwlock_indexes.unlock();
 }
 
 bool SimDataCollector::getTerminateDataRequests() const
@@ -294,5 +287,7 @@ bool SimDataCollector::getTerminateDataRequests() const
 
 void SimDataCollector::setTerminateDataRequests(bool value)
 {
+    rwlock_dataRequest.lockForWrite();
     terminateDataRequests = value;
+    rwlock_dataRequest.unlock();
 }

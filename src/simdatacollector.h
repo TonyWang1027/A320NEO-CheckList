@@ -21,8 +21,6 @@
 /**
  * @file simdatacollector.h
  *
- * @brief SimDataCollector dynamic-link library header file
- *
  * @author Tony Wang <634599706@qq.com>
  *
  * @date 2021/02/24
@@ -36,7 +34,11 @@
 
 #include <QtCore/qglobal.h>
 
+#ifdef SIMDATACOLLECTOR_EXPORT
 #define SIMDATACOLLECTOR_EXPORT Q_DECL_EXPORT
+#else
+#define SIMDATACOLLECTOR_EXPORT Q_DECL_IMPORT
+#endif
 
 #include <QtCore>
 #include <windows.h>
@@ -49,7 +51,9 @@
 
 extern HRESULT hr;
 extern HANDLE hSimConnect;
-extern QReadWriteLock rwlock;
+extern QReadWriteLock rwlock_stageNum;
+extern QReadWriteLock rwlock_indexes;
+extern QReadWriteLock rwlock_dataRequest;
 
 enum DATA_DEFINE_ID {
     DEFINITION,
@@ -80,7 +84,7 @@ struct SimResponse {
     uint32_t autopilot_master;  // autopilot_1 switch (AP1)
 };
 
-class SIMDATACOLLECTOR_EXPORT SimDataCollector : public QObject
+class Q_DECL_EXPORT SimDataCollector : public QObject
 {
     Q_OBJECT
 public:
@@ -117,10 +121,6 @@ signals:
     void dataCollected_signal(int, int, uint32_t);
 
 };
-
-extern "C++" SIMDATACOLLECTOR_EXPORT void lockForRead();
-extern "C++" SIMDATACOLLECTOR_EXPORT void lockForWrite();
-extern "C++" SIMDATACOLLECTOR_EXPORT void unlock();
 
 void CALLBACK Dispatch(SIMCONNECT_RECV* pData, DWORD cbData, void* pContext);
 

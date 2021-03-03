@@ -60,10 +60,15 @@ MainToolBar::MainToolBar(QWidget *parent) : QWidget(parent)
     /* Methods & Functions */
     this->setupUI();  // build layout
     this->events();
+
+    SimConnectThread::getInstance()->simConnect();
 }
 
 MainToolBar::~MainToolBar()  // virtual destructor
 {
+    SimConnectThread::getInstance()->simDisconnect();
+    SimConnectThread::deleteInstance();
+
     delete this->lay;
     this->lay = nullptr;
 
@@ -133,6 +138,7 @@ void MainToolBar::setupUI()
     this->topWindowButton->setStyleSheet("QPushButton#topWindowButton{ border:none;background:none; }"
                                      "QPushButton#topWindowButton:hover { border:none;background:#464659; }");
 
+    this->aircraftTypeLabel->setToolTip(QString::fromUtf8("v0.10.1"));
     this->dataSettingsButton->setToolTip(QString::fromUtf8("设置检查单数据"));
     this->topWindowButton->setToolTip(QString::fromUtf8("置顶窗口"));
     this->dropDownButton->setToolTip(QString::fromUtf8("显示/隐藏检查单"));
@@ -302,8 +308,7 @@ void MainToolBar::showAndHideCheckListFrame()
             // then close the drop down window will automatic turn to next check list stage
             setDropDownArrowIcon(true);
 
-            disconnect(this->checkListFrame, SIGNAL(prevPGButton_onClicked_signal()), this, SLOT(prevPGButton_onClicked()));
-            disconnect(this->checkListFrame, SIGNAL(nextPGButton_onClicked_signal()), this, SLOT(nextPGButton_onClicked()));
+            this->checkListFrame->terminateDataRequestFromSim();
 
             this->checkListFrame->close();
             this->checkListFrame->deleteLater();
